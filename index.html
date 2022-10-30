@@ -5,22 +5,73 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cab service management</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <style>
+        body{
+            margin: 0%;
+            padding: 0%;
+        }
+        .main{
+            background: url(young-uber-driver-car-interior.jpg)no-repeat;
+            background-size: cover;
+            height: 100vh;
+        }
+        .cab2{
+        position: absolute;
+        top: 50%;
+        left: 55%;
+        transform: translate(-50%,-50%);
+        }
+        .cab2 h1{
+        color: rgb(242, 199, 199);
+        font-size: 90px;
+        font-weight: bold;
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        -webkit-text-stroke: 1px rgb(249, 204, 204);
+        color: transparent;
+        background-image: linear-gradient(rgb(249,204, 204),rgb(249,204, 204));
+        background-repeat: no-repeat;
+        -webkit-background-clip: text;
+        background-position: -750px 0;
+        animation: backcolor 3s linear infinite alternate;
+        }
+        @keyframes backcolor{
+    100%{
+        background-position: 0 0;
+    }
+        }
+    </style>
 </head>
 <body>
-    <div class="cab1">
-        <nav class="navbar">
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="booking.html">Booking</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
-        <div class="cab2">
+    <div class="main">
+        <nav class="navbar navbar-expand-lg " style="background-color:rgb(249,204, 204)">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html"><b>MYCAB</b></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="login1.html">Login</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="registration.html">Registration</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <div class="cab2">
             <h1>MY CAB</h1>  
         </div>
     </div>
-    
 </body>
 </html>

@@ -4,13 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="home.css">
+    <title>home Page</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <style>
+        body{
+            margin: 0%;
+            padding: 0%;
+        }
+        .main{
+            background: url(11291.jpg)no-repeat;
+            background-size: cover;
+            height: 100vh;
+        }
+        .table{
+        list-style-type: none;
+        }
+        .table a{
+        color: rgb(24, 3, 3);
+        text-decoration: none;
+        }
+    </style>
 </head>
-<body>    
-    <h1><b><center>MY CAB 🚕</center></b></h1>
-        <img src="https://blog.infinitecab.com/wp-content/uploads/2022/04/cab-management-software.jpg" height="450px" width="100%">
-        <h3><b>WELCOME</b></h3>
+<body>
+    <div class="main">
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html"><h2><b>MYCAB</b></h2></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+            </div>
+          </nav>
+          <h4><b>WELCOME</b></h4>
         <p>MY CAB offers the best cab operators and drivers for every location of India to make your journey without any problem.We ensure you an unforgettable experience while traveling with us.
             This online taxi booking facility offers taxi services at discounted rates. So, what are you waiting for? Book your cab with MY CAB and travel comfortably.
         </p>
@@ -23,7 +52,7 @@
             <li>Enter the details and purpose of your ride</li>
             <li>Cab booking is done, just in matter of few clicks</li>
         </ul>
-        <h3><b>services we provide</b></h3>
+        <h4><b>services we provide</b></h4>
         <ol>
             <li><b>Extensive Options</b>- Wide range of quality safe and licensed vehicles.</li>
             <li><b>Convenient</b> - Enjoy a high quality transfer experiance at surprisingly low prices.</li>
@@ -32,8 +61,9 @@
             <li><b>Secure and Safer Rides</b>Verified drivers, an emergency alert button, and live ride tracking are some of the features that we have in place to ensure you a safe travel experience.</li>
 
         </ol>
-        <h3>Top Cab Routes</h3>
-        <table border="1" cellpadding="4" cellspacing="6">
+        <div class="table">
+            <h4>Top Cab Routes</h4>
+        <table cellspacing="6">
             <tr>
                 <td><a href="booking.html">🚕Ernakulam-Trivandrum</a></td>
                 <td><a href="booking.html">🚕Ernakulam-Malappuram</a></td>
@@ -48,7 +78,8 @@
                 <td><a href="booking.html">🚕Ernakulam-Kannur</a></td>
             </tr>
         </table>
-        
-
+        </div>
+    </div>
+    
 </body>
 </html>

@@ -1,25 +1,38 @@
-<html>
-    <head>
-        <title>customer details</title>
-        <style>
-            .tab2{
-                border: 1px solid rgb(4, 4, 134);
-            }
-        </style>
-    </head>
-    <body>
-        <form action="details.html"></form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <style>
+        body{
+            margin: 0%;
+            padding: 0%;
+        }
+        .main{
+            background: url(https://img.freepik.com/premium-vector/call-taxi-cab-via-mobile-phone-with-landscape-background-public-transport-services-concept_530733-1635.jpg?w=900)no-repeat;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+        }
+        .form{
+            background-color:rgba(252, 205, 205, 0.5);
+            backdrop-filter: blur(10px);
+            height: 80vh;
+            width: 80vh;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="form">
+            <form action="details.html"></form>
         <table>
-            <tr >
-               <td class="tab2"><label for="title"> Title:</label></td>
-               <td>
-                <select name="title" id="title">
-                    <option value="1">Mr.</option>
-                    <option value="1">Mrs.</option>
-                    <option value="1">Ms.</option>
-                </select>
-               </td>
-            </tr>
             <tr>
                 <td class="tab2">
                     <label for="firstname">First Name</label>
@@ -56,15 +69,9 @@
                 <td><input type="text" id="email" placeholder="Enter your email id"></td>
             </tr>
             <tr>
-                <td class="tab2"><label for="addar">Addar:</label></td>
-                <td><input type="number" id="addar" placeholder="addar"></td>
-            </tr>
-            <tr>
-                <td><label for="contact">Can we contact you?</label></td>
-                <td><input type="radio" id="contactyes" name="contact" value="3"/>Yes
-                    <input type="radio" id="contactno" name="contact" value="4"/>No
-                </td>
-            </tr>
+                <td class="tab2"><label for="dob">Traveling date:</label></td>
+                <td><input type="date" placeholder=DD-MM-YYYY/></td>
+            </tr>  
             <tr>
                 <td><label for="communication">Communication preferance</label></td>
                 <td><input type="checkbox" id="email" value="5"/>Email
@@ -74,18 +81,6 @@
         <table>
             <tr>
                 <td><input type="checkbox" id="privacy"/>I agree to the<a href="contact.html">terms and conditions</a>of the website</td>
-            </tr>
-            <tr>
-                <td class="tab2">
-                    <label for="payment">payment:</label>
-                </td>
-                <td>
-                    <select name="payment" id="payment">
-                        <option value="4">card payment</option>
-                        <option value="5">net banking</option>
-                        <option value="6">online payment</option>
-                    </select>
-                </td>
             </tr>
             <tr>
                 <td><input type="submit" onclick="javascript:saveData();"id=submit></td>
@@ -104,5 +99,8 @@
                 localStorage.setItem('address',address);
             }
         </script>
-    </body>
+        </div>
+    </div>
+    
+</body>
 </html>
