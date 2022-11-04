@@ -14,4 +14,11 @@ body{
     .alert-danger{
         color: red;
     }
+    .tab2{
+            list-style-type: none;
+    }
+    .tab2 a{
+            color: rgb(16, 10, 10);
+            text-decoration: none;
+    }
 

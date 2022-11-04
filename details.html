@@ -26,6 +26,13 @@
             width: 80vh;
             text-align: center;
         }
+        .tab2{
+            list-style-type: none;
+        }
+        .tab2 a{
+            color: rgb(16, 10, 10);
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
@@ -37,21 +44,21 @@
                 <td class="tab2">
                     <label for="firstname">First Name</label>
                 </td>
-                <td><input type="text" id="firstname" name="firstname" placeholder="your first name"></td>
+                <td><input type="text" id="firstname" name="firstname" placeholder="your first name" required></td>
             </tr>
             <tr>
                 <td class="tab2"><label for="lastname">Last Name:</label></td>
                 <td>
-                    <input type="text" id="lastname" name="lastname" placeholder="Your Last Name">
+                    <input type="text" id="lastname" name="lastname" placeholder="Your Last Name" required>
                 </td>
             </tr>
             <tr>
                 <td class="tab2"><label for="address">Address:</label></td>
-                <td><textarea placeholder="Type your address" id="address" name="address" rows="6" cols="20"></textarea></td>
+                <td><textarea placeholder="Type your address" id="address" name="address" rows="6" cols="20" required></textarea></td>
             </tr>
             <tr>
                <td class="tab2"><label for="age">Age:</label></td>
-               <td><input type="number" id="age" name="age"></td>
+               <td><input type="number" id="age" name="age" required></td>
             </tr>
             <tr>
                 <td class="tab2"><label for="gender">Gender:</label></td>
@@ -62,11 +69,11 @@
             </tr>
             <tr>
                 <td class="tab2"><label for="mobile">Mobile:</label></td>
-                <td><input type="number" id="mobile" placeholder="Mobile number"></td>
+                <td><input type="number" id="mobile" placeholder="Mobile number" required></td>
             </tr>
             <tr>
                 <td class="tab2"><label for="email">Email:</label></td>
-                <td><input type="text" id="email" placeholder="Enter your email id"></td>
+                <td><input type="text" id="email" placeholder="Enter your email id" required></td>
             </tr>
             <tr>
                 <td class="tab2"><label for="dob">Traveling date:</label></td>
@@ -83,8 +90,10 @@
                 <td><input type="checkbox" id="privacy"/>I agree to the<a href="contact.html">terms and conditions</a>of the website</td>
             </tr>
             <tr>
-                <td><input type="submit" onclick="javascript:saveData();"id=submit></td>
-                <td><input type="reset" id="reset" name="reset" value="Reset"/></td>
+                <td><button class ="tab2" type="submit"><a href="home.html">Submit</a></button></td>
+                <!-- <td><input type="submit" onclick="javascript:saveData();"id=submit></td> -->
+                <td><button class ="tab2" type="reset"><a href="details.html">Reset</a></button></td>
+                <!-- <td><input type="reset" id="reset" name="reset" value="Reset"/></td> -->
             </tr>
         </table>
         </form>

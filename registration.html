@@ -28,6 +28,16 @@
         .alert-danger{
         color: red;
         }
+        #errorpass{
+            color: red;
+        }
+        .text-center{        
+            list-style-type: none;
+        }
+        .text-center a{
+            color: rgb(16, 10, 10);
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
@@ -38,15 +48,15 @@
             <div class="row">
                 <!-- <div class="col-sm-3 bg-primary"></div> 
                 <div class="col-sm-6 offset-sm-3">-->
-                    <h1 class="text-center">Registration</h1>
-                    <form name="loginform" id="loginform" onsubmit="validate(event)">
+                    <h1 class="text-center"><a href="home.html">Registration</a></h1>
+                    <form name="loginform" id="loginform" onsubmit='validate(event)' action = "home.html">
                         <div>
                             <label>Name</label>
-                            <input type="name" name="name" class="form-control" placeholder="Enter your name">
+                            <input type="name" name="name" class="form-control" placeholder="Enter your name" required>
                         </div>
                         <div>
                             <label>Mobile</label>
-                            <input type="number" name="mobile" class="form-control">
+                            <input type="number" name="mobile" class="form-control" required>
                         </div>
                         <div>
                             <label>Username</label>
@@ -54,15 +64,16 @@
                         </div>
                         <div>
                             <label>Password</label>
-                            <input type="password" name="password" class="form-control"  minlength="8" maxlength="25" required>
+                            <input type="password" name="password" id="pword" class="form-control"  minlength="8" maxlength="25" required>
                         </div>
                         <div>
                             <label>Confirm Password</label>
-                            <input type="password" name="cpassword" class="form-control"  minlength="8" maxlength="25" required>
+                            <input type="password" name="cpassword" id="cpword" class="form-control"  minlength="8" maxlength="25" required>
                         </div>
+                        <h6  class="alert-danger" id="error-msg"></h6>
                         <div class="d-grid mt-4">
-                            <p class="alert-danger" id="error-messages"></p>
-                            <button type="submit" class="btn btn-primary shadow" id="btn-login"  onclick="return validate();">Sign In</button>
+                            <h6 class="alert-danger" id="error-messages"></h6>
+                            <button type="submit" class="btn btn-outline-success shadow" id="btn-login"  onclick="return validate();">Sign In</button>
                         </div>
                     </form>
                 </div>
@@ -71,21 +82,37 @@
       </div>
     </div>
     <script>
-         function validate(e){
+          function validate(e){
         var email = document.forms[0]['username'];
         var password = document.forms[0]['password'];
-        var password = document.forms[0]['cpassword'];
+        var cpassword = document.forms[0]['cpassword'];
         var error = document.getElementById('error-messages');
+        var error = document.getElementById('error-msg');
         if(!email.validity.valid){
-            error.innerHTML = 'Please enter a valid email';
+            error.innerHTML = 'Please enter a valid username';
             return false;
         }
         if(!password.validity.valid){
+            //consol.log('pasword');
             error.innerHTML = 'Please enter a valid password';
             return false;
+           
         }
-        e.preventDefault();
-    }
+        if(!cpassword.validity.valid){
+            //consol.log('pasword');
+            error.innerHTML = ' password is not matching';
+            return false;
+           
+        }
+        
+        // if(cpassword != password){
+        //    document.write('password is not matching');
+        //     return false;
+        // //     console.log('hello')
+        // //     e.preventDefault();
+        // }
+       }
     </script>
+        
 </body>
 </html>
