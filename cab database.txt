@@ -1,0 +1,51 @@
+create database cab_management_sysytem;
+use cab_management_sysytem;
+
+
+CREATE TABLE driver(
+Driver_id INT PRIMARY KEY,
+Driver_license_no INT NOT NULL,
+Driver_name VARCHAR(50) NOT NULL,
+Driver_Password VARCHAR(50) NOT NULL,
+Driver_Email VARCHAR(50) NOT NULL,
+Driver_Mobile INT NOT NULL,
+Driver_Address VARCHAR(100),
+Driver_Dob DATE,
+Driver_Gender VARCHAR(5) NOT NULL
+);
+
+CREATE TABLE passenger(
+Passenger_id  INT PRIMARY KEY AUTO_INCREMENT,
+First_name VARCHAR(50) NOT NULL,
+Last_name VARCHAR(50) NOT NULL,
+Passward VARCHAR(50) NOT NULL,
+Email VARCHAR(50) NOT NULL,
+Mobile INT NOT NULL,
+Address VARCHAR(100),
+Dob DATE,
+Gender VARCHAR(5) NOT NULL);
+
+CREATE TABLE cab (
+cab_no INT PRIMARY KEY,
+cab_name VARCHAR(50) NOT NULL,
+cab_description VARCHAR(50),
+cab_total_capacity INT NOT NULL,
+Driver_id INT,
+CONSTRAINT FK_driver_cab FOREIGN KEY(Driver_id)
+references driver(Driver_id) ON DELETE SET NULL);
+
+CREATE TABLE Booking (
+Book_id INT PRIMARY KEY ,
+Date_of_booking DATE NOT NULL,
+Cab_from VARCHAR(50) NOT NULL,
+Cab_to VARCHAR(50) NOT NULL,
+Booking_time TIME,
+Cab_no INT,
+Cost INT NOT NULL,
+Passenger_id INT,
+CONSTRAINT FK_passenger_booking FOREIGN KEY(Passenger_id)
+REFERENCES passenger(Passenger_id) ON DELETE SET NULL,
+Driver_id int,
+CONSTRAINT FK_driver_booking FOREIGN KEY(Driver_id)
+REFERENCES driver(Driver_id) ON DELETE SET NULL
+);
